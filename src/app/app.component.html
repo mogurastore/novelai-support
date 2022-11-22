@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit()">
+  <input type="text" [(ngModel)]="rawText" name="rawText" />
+  <button>submit</button>
+</form>
+
+<div>
+  <button (click)="copyToClipboard()">copy</button>
+</div>
+
+<table>
+  <tr *ngFor="let prompt of prompts">
+    <td>{{ prompt.text }}</td>
+    <td><button (click)="increment(prompt)">+</button></td>
+    <td><button (click)="decrement(prompt)">-</button></td>
+    <td><button (click)="remove(prompt)">x</button></td>
+  </tr>
+</table>
