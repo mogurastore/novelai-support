@@ -1,0 +1,10 @@
+{
+  "name": "novelai-support",
+  "version": "0.0.0.1",
+  "manifest_version": 3,
+  "description": "Support to input prompts to NovelAI",
+  "permissions": [],
+  "action": {
+    "default_popup": "index.html"
+  }
+}
