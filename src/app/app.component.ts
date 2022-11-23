@@ -1,3 +1,4 @@
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -34,6 +35,10 @@ export class AppComponent implements OnInit {
     } else {
       prompt.text = `{${prompt.text}}`;
     }
+  }
+
+  movePrompt(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.prompts, event.previousIndex, event.currentIndex);
   }
 
   async readFromPage() {

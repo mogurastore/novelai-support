@@ -3,10 +3,12 @@
 </div>
 
 <table>
-  <tr *ngFor="let prompt of prompts">
-    <td>{{ prompt.text }}</td>
-    <td><button (click)="increment(prompt)">+</button></td>
-    <td><button (click)="decrement(prompt)">-</button></td>
-    <td><button (click)="remove(prompt)">x</button></td>
-  </tr>
+  <tbody cdkDropList (cdkDropListDropped)="movePrompt($event)">
+    <tr *ngFor="let prompt of prompts" cdkDrag>
+      <td class="draggable" cdkDragHandle>{{ prompt.text }}</td>
+      <td><button (click)="increment(prompt)">+</button></td>
+      <td><button (click)="decrement(prompt)">-</button></td>
+      <td><button (click)="remove(prompt)">x</button></td>
+    </tr>
+  </tbody>
 </table>
