@@ -79,7 +79,7 @@ export class AppComponent implements OnInit {
         currentWindow: true,
       });
 
-      const text = this.prompts.map((p) => p.text).join(',') + ', ';
+      const text = this.prompts.map((p) => p.text).join(', ') + ', ';
 
       if (tab.id) {
         chrome.scripting.executeScript({
