@@ -3,6 +3,9 @@
   "version": "0.0.0.1",
   "manifest_version": 3,
   "description": "Support to input prompts to NovelAI",
+  "icons": {
+    "128": "icon.png"
+  },
   "host_permissions": ["https://novelai.net/"],
   "permissions": ["scripting", "tabs"],
   "action": {
