@@ -51,15 +51,18 @@ export class AppComponent implements OnInit {
       const results = await chrome.scripting.executeScript({
         target: { tabId: tab.id },
         func: () => {
-          const dom: any = document.querySelector('#prompt-input-0');
+          const dom =
+            document.querySelector<HTMLInputElement>('#prompt-input-0');
 
           if (dom) {
             return dom.value;
+          } else {
+            return '';
           }
         },
       });
 
-      const rawText: string = results[0].result || '';
+      const rawText: string = results[0].result;
 
       this.prompts = rawText
         .split(',')
