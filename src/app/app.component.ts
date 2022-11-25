@@ -41,10 +41,6 @@ export class AppComponent implements OnInit {
     moveItemInArray(this.prompts, event.previousIndex, event.currentIndex);
   }
 
-  openDeepl(prompt: { text: string }) {
-    window.open(`https://www.deepl.com/translator#en/ja/${prompt.text}`);
-  }
-
   async readFromPage() {
     const [tab] = await chrome.tabs.query({
       active: true,
