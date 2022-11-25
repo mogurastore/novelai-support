@@ -2,11 +2,6 @@ td {
   white-space: nowrap;
 }
 
-.header {
-  position: sticky;
-  top: 0;
-}
-
 .draggable {
   cursor: move;
 }
